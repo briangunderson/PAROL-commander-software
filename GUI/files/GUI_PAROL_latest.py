@@ -1374,7 +1374,7 @@ if __name__ == "__main__":
     # Speed slider, acc slider, WRF/TRF
     Jog_control = [0,0,0,0]
     # COM PORT, BAUD RATE, 
-    General_data = [8,3000000]
+    General_data = [42,3000000]
     # Home,Enable,Disable,Clear error,Real_robot,Sim_robot,Demo app,Program executions,Park
     Buttons = [0,0,0,0,1,1,0,0,0]
     
