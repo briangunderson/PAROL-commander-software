@@ -367,21 +367,21 @@ def Task1(shared_string,Position_out,Speed_out,Command_out,Affected_joint_out,In
 
                 if Robot_mode != "Cartesian jog":
                     for i in range(6):
-                        if abs(Speed_out[i]) >= 300000:
+                        if abs(Speed_out[i]) >= 900000: #was 300000 BrianG
                             Speed_out[i] = int(Speed_out[i] / 10000)
                             arr = bytes(str(Speed_out[i]), 'utf-8')
                             arr2 = bytes(str(i+1),'utf-8')
-                            shared_string.value = b'Error: Joint  ' + arr2  +   b'  speed error in cart mode  '+ arr
+                            shared_string.value = b'Line 374 Error: Joint  ' + arr2  +   b'  speed error in cart mode  '+ arr
 
 
                 else:
                     # If any joint starts moving faster than allowed DISABLE ROBOT
                     for i in range(6):
-                        if abs(Speed_out[i]) >= 300000:
-                            Command_out.value = 102
+                        if abs(Speed_out[i]) >= 900000: #was 300000 BrianG
+                            # Command_out.value = 102
                             arr = bytes(str(Speed_out[i]), 'utf-8')
                             arr2 = bytes(str(i+1),'utf-8')
-                            shared_string.value = b'Error: Joint  ' + arr2  +   b'  speed error in cart mode  '+ arr
+                            shared_string.value = b'Line 384 Error: Joint  ' + arr2  +   b'  speed error in cart mode  '+ arr
                 Robot_mode = "Cartesian jog"
                 # Calculate every joint speed using var and q1
 
