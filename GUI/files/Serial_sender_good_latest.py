@@ -265,7 +265,7 @@ logging.basicConfig(level = logging.DEBUG,
 )
 
 if my_os == "Windows": 
-    STARTING_PORT = 6 # COM3
+    STARTING_PORT = 4 # COM3
 elif my_os == "Darwin":
     STARTING_PORT = 0 # Mac uses different port naming
 else:   
