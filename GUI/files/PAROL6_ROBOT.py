@@ -1,5 +1,5 @@
 # This file acts as configuration file for robot you are using
-# It works in conjustion with configuration file from robotics toolbox
+# It works in conjunction with configuration file from robotics toolbox
 
 from swift import Swift
 import spatialmath.base.symbolic as sym
